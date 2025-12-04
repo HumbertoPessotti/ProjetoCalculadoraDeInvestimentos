@@ -12,7 +12,7 @@
       class="row-span-2 bg-emerald-300 flex flex-col justify-between py-5 px-2"
     >
       <h1 class="text-2xl font-bold px-6">Calculadora de Investimentos</h1>
-      <form class="w-full">
+      <form id="ivestment-form" class="w-full">
         <div class="flex w-full flex-col px-6 my-2">
           <label for="starting-amount" class="font-bold text-gray-700"
             >Investimento inicial</label
@@ -28,6 +28,7 @@
               type="text"
               class="w-5/6 rounded-r-lg bg-white px-2"
               placeholder="0.00"
+              required
               id="starting-amount"
             />
           </div>
@@ -62,6 +63,7 @@
               type="text"
               class="w-2/3 bg-white rounded-l-lg px-2"
               placeholder="00"
+              required
               id="time-amount"
             />
 
@@ -92,6 +94,7 @@
               type="text"
               class="w-1/2 bg-white px-2"
               placeholder="0.0"
+              required
               id="return-rate"
             />
 
@@ -121,6 +124,7 @@
               type="text"
               class="w-5/6 rounded-r-lg bg-white px-2"
               placeholder="0.0"
+              required
               id="tax-rate"
             />
           </div>
@@ -128,6 +132,8 @@
       </form>
       <div class="flex h-12 px-6 my-8 w-full gap-2">
         <button
+          id="calculate-results"
+          form="ivestment-form"
           class="w-1/2 rounded-lg bg-emerald-950 text-slate-200 hover:bg-emerald-800"
         >
           Calcular
@@ -138,5 +144,6 @@
     <main>
       <p>Resultados</p>
     </main>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
