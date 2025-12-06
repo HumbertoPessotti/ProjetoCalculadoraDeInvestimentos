@@ -13,7 +13,7 @@
     >
       <h1 class="text-2xl font-bold px-6">Calculadora de Investimentos</h1>
       <form id="ivestment-form" class="w-full">
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="starting-amount" class="font-bold text-gray-700"
             >Investimento inicial</label
           >
@@ -30,13 +30,14 @@
               placeholder="0.00"
               required
               id="starting-amount"
+              name="starting-amount"
             />
           </div>
         </div>
 
         <!-- -------------------------- -->
 
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="additional-contribution" class="font-bold text-gray-700"
             >Aportes adicionais</label
           >
@@ -52,11 +53,12 @@
               class="w-5/6 rounded-r-lg bg-white px-2"
               placeholder="0.00"
               id="additional-contribution"
+              name="additional-contribution"
             />
           </div>
         </div>
         <!-- --------------------------- -->
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="time-amount" class="font-bold text-gray-700">Prazo</label>
           <div class="flex">
             <input
@@ -65,11 +67,13 @@
               placeholder="00"
               required
               id="time-amount"
+              name="time-amount"
             />
 
             <select
               name=""
               id="time-amount-period"
+              name="time-amount-period"
               class="w-1/3 rounded-r-lg text-center bg-white border-l-2 border-emerald-600 hover:bg-emerald-950 hover:text-slate-200"
             >
               <option value="monthly">Mensal</option>
@@ -79,7 +83,7 @@
         </div>
 
         <!-- --------------------------- -->
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="return-rate" class="font-bold text-gray-700"
             >Rentabilidade</label
           >
@@ -96,11 +100,13 @@
               placeholder="0.0"
               required
               id="return-rate"
+              name="return-rate"
             />
 
             <select
               name=""
               id="evaluation-period"
+              name="evaluation-period"
               class="w-1/3 rounded-r-lg text-center bg-white border-l-2 border-emerald-600 hover:bg-emerald-950 hover:text-slate-200"
             >
               <option value="monthly">Mensal</option>
@@ -109,7 +115,7 @@
           </div>
         </div>
         <!-- ------------------------------------ -->
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="tax-rate" class="font-bold text-gray-700"
             >Impostos sobre lucro</label
           >
@@ -126,6 +132,7 @@
               placeholder="0.0"
               required
               id="tax-rate"
+              name="tax-rate"
             />
           </div>
         </div>
@@ -138,7 +145,9 @@
         >
           Calcular
         </button>
-        <button class="w-1/2 rounded-lg hover:bg-emerald-500">Limpar</button>
+        <button id="clear-form" class="w-1/2 rounded-lg hover:bg-emerald-500">
+          Limpar
+        </button>
       </div>
     </aside>
     <main>
